@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            padding-left: 40%;
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Polling Home</h1>
+    <h2>Welcom, {{user}}</h2>
+    <h3 style= 'font-style: bold;'>Your Polls</h3>
+    {% for name in owns %}
+    <h4><a href = 'inspection/{{name}}/'>{{name}}</a> link -->+  http://127.0.0.1:8000/polling/poll/{{name}}/</h4>
+    {% endfor%}
+    
+    <a href = 'create_poll/'><h3 style="color:red">create poll</h3></a>
+</body>
+</html>
